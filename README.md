@@ -1,5 +1,5 @@
 # sportbuff
-Sport Buff Android Application (Proff of Concept)
+Sport Buff Android Application (Proof of Concept)
 
 # The Task:
 
