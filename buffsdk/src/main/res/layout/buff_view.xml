@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/buff_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="1dp">
+
+    <com.buffup.sdk.ui.BuffSender
+        android:id="@+id/sender_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/question_view" />
+
+    <com.buffup.sdk.ui.BuffQuestion
+        android:id="@+id/question_view"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/sender_view"
+        app:layout_constraintBottom_toTopOf="@id/answers_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/answers_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@id/question_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        tools:itemCount="2"
+        tools:listitem="@layout/buff_answer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
